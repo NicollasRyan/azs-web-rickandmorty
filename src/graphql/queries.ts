@@ -10,11 +10,6 @@ export const GET_EPISODES = gql`
                 episode
                 characters {
                     id
-                    name
-                    species
-                    type
-                    gender
-
                 }
             }
         }
