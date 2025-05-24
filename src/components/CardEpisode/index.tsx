@@ -67,14 +67,14 @@ export function CardEpisode({ name, air_date, characters, code, id }: any) {
     return (
         <BoxCard>
             <TitleCard>
-                <Typography sx={{ color: "#2ecc71" }}>{code}</Typography>
-                {isFavorite ? <Favorite sx={{ color: "#2ecc71" }} onClick={() => handleFavorite(id)} /> : <FavoriteBorder sx={{ color: "#2ecc71" }} onClick={() => handleFavorite(id)} />}
+                <Typography>{code}</Typography>
+                {isFavorite ? <Favorite onClick={() => handleFavorite(id)} /> : <FavoriteBorder onClick={() => handleFavorite(id)} />}
             </TitleCard>
             <Typography>{name}</Typography>
-            <Typography sx={{ color: "#b0bec5" }}>Data de lançamento: {air_date}</Typography>
+            <Typography className="description">Data de lançamento: {air_date}</Typography>
             <DescriptionCard>
-                <Typography sx={{ color: "#b0bec5" }}>Quantidade de personagens: {characters}</Typography>
-                {isVisibility ? <Visibility sx={{ color: "#2ecc71" }} onClick={() => handlevisibility(id)} /> : <VisibilityOff sx={{ color: "#2ecc71" }} onClick={() => handlevisibility(id)} />}
+                <Typography className="description">Quantidade de personagens: {characters}</Typography>
+                {isVisibility ? <Visibility onClick={() => handlevisibility(id)} /> : <VisibilityOff onClick={() => handlevisibility(id)} />}
             </DescriptionCard>
             <ButtonCard onClick={() => navigate(`/episode/${id}`)}>Ver Detalhes</ButtonCard>
         </BoxCard>

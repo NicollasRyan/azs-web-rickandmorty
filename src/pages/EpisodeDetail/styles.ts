@@ -2,7 +2,11 @@ import { Box, Button } from "@mui/material";
 import { styled } from "@mui/system";
 
 export const DetailBox = styled(Box)`
-    margin: 20px 0;  
+    margin: 20px 0;
+    
+    h6 {
+        color: #b0bec5;
+    }
 `;
 
 export const BackBox = styled(Box)`

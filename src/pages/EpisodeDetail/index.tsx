@@ -80,7 +80,7 @@ export function EpisodeDetail() {
 
     return (
         <DetailBox>
-            <Grid container spacing={2} sx={{ marginBottom: "20px" }}>
+            <Grid container spacing={2}>
                 <Grid size={{ md: 12 }}>
                     <BackBox onClick={() => navigate("/")}>
                         <ArrowBack />
@@ -88,7 +88,7 @@ export function EpisodeDetail() {
                     </BackBox>
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 6 }}>
-                    <Typography variant="h6" sx={{ color: "#b0bec5" }}>{details.episode}</Typography>
+                    <Typography variant="h6">{details.episode}</Typography>
                     <Typography variant="h3">{details.name}</Typography>
                     <Typography>Episódio foi ao ar {details.air_date}</Typography>
                     <Typography>{details.characters.length} personagens no episódio</Typography>
@@ -98,17 +98,17 @@ export function EpisodeDetail() {
                     <ActionBox>
                         <FavoriteButton onClick={() => handleFavorite(id)}>
                             {isFavorite ? (
-                                <Favorite sx={{ color: "#fff" }} />
+                                <Favorite />
                             ) : (
-                                <Add sx={{ color: "#fff" }} />
+                                <Add />
                             )} {isFavorite ? "Remover dos favoritos" : "Adicionar aos favoritos"}
                         </FavoriteButton>
 
                         <SeeButton onClick={() => handlevisibility(id)}>
                             {isVisibility ? (
-                                <Visibility sx={{ color: "#fff" }} />
+                                <Visibility />
                             ) : (
-                                <VisibilityOff sx={{ color: "#fff" }} />
+                                <VisibilityOff />
                             )} {isVisibility ? "Remover assistido" : "Marcar assistido"}
                         </SeeButton>
                     </ActionBox>

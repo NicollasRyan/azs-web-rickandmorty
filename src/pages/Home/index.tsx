@@ -9,6 +9,7 @@ import { CardEpisode } from "../../components/CardEpisode";
 import { SearchBar } from "../../components/SeachBar";
 import { Loading } from "../../components/Loading";
 import { Error } from "../../components/Error";
+import { HomeContainer } from "./style";
 
 export function Home() {
     const { search } = useSearchStore();
@@ -32,7 +33,7 @@ export function Home() {
     const error = errorFilter || errorAll;
 
     return (
-        <Box sx={{ margin: '20px 0' }}>
+        <HomeContainer>
             <SearchBar />
             <Grid container spacing={2}>
                 {loading ? <Loading /> :
@@ -50,6 +51,6 @@ export function Home() {
                         ))
                 }
             </Grid>
-        </Box>
+        </HomeContainer>
     )
 }

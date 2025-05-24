@@ -8,6 +8,11 @@ export const BoxCard = styled(Box)`
 
     svg {
         cursor: pointer;
+        color: #2ecc71;
+    }
+
+    .description {
+        color: #b0bec5;
     }
 `;
 
