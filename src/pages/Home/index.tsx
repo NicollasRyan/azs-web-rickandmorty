@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDebounce } from "use-debounce";
 import { useLazyQuery, useQuery } from "@apollo/client";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 import { GET_EPISODES, GET_EPISODES_BY_NAME } from "../../graphql/queries";
 import { useSearchStore } from "../../store/useSearchStore";
